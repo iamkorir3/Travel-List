@@ -12,7 +12,7 @@ export default function App() {
     setItems((items) => [...items, item]);
   }
 
-  function handleDeleteItems(id) {
+  function handleDeleteItem(id) {
     setItems((items) => items.filter((item) => item.id !== id));
   }
 
@@ -34,7 +34,7 @@ export default function App() {
       <Form onAddItems={handleAddItems} />
       <PackingList
         items={items}
-        onADelItems={handleDeleteItems}
+        onADelItems={handleDeleteItem}
         onToggleItem={handleToggleItem}
         onClearList={handleClearList}
       />
